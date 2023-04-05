@@ -2,17 +2,27 @@
 JDK Version 17
 
 1 - Clone the code using 'https://github.com/Irshad046/student.git'
+
 2 - Once cloned, it can be up and running if JDK 17 is connfigured sicne Mongo image is used in this repo
 
-Dokcer
+
+Dokcer Setup
+
 1 - Image for the above can be pulled from 'https://hub.docker.com/layers/irshadahmad046/student/tagname/images/sha256:4ea82d0496ee1b5431352b4c1df5a382f265beb4e8c54c399034c4cad2d90a07'
+
 2 - Once pulled on local machine, please use the 'docker-compose.yaml' file in the source code to start the application container using 'docker compose up -d'
+
 3 - Please make sure the terminal is pointing to this 'docker-composse.yaml' file.
+
 4 - Once it is up, please find the below urls for application.
 
+
 Please be noted that in order to create student, we first need to create a department.
+
 POST
+
 http://localhost:8080/v1/department/add-department
+
 Request Body
 {
     "departmentName":"CS"
@@ -20,7 +30,9 @@ Request Body
 
 
 Once created, we can create new student for those department(s)
+
 POST
+
 http://localhost:8080/v1/student/add-student
 {
     "firstName":"Some",
@@ -28,10 +40,13 @@ http://localhost:8080/v1/student/add-student
     "department":"CS"
 }
 
+
 GET
+
 http://localhost:8080/v1/student/get-all-students
 
 GET - with Path variable
+
 http://localhost:8080/v1/student/c2e6fbef-7bac-4b8c-995f-3fa24ad2413a
 
 
